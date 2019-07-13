@@ -49,6 +49,8 @@ brew install grafana
 brew services start grafana
 ```
 
+##### tool
+这个项目是基于bilibili的kratos的tool，并且改造为适合项目的版本
 
 ##### 项目目录
 通常一个services会被分成几个部分
