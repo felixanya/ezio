@@ -13,11 +13,12 @@ require (
 	github.com/lib/pq v1.1.1 // indirect
 	github.com/mattn/go-colorable v0.1.2 // indirect
 	github.com/prometheus/common v0.4.1
-	github.com/sirupsen/logrus v1.4.2 // indirect
+	github.com/sirupsen/logrus v1.4.2
 	github.com/urfave/cli v1.20.0
 	golang.org/x/crypto v0.0.0-20190605123033-f99c8df09eb5 // indirect
-	golang.org/x/sys v0.0.0-20190602015325-4c4f7f33c9ed // indirect
+	golang.org/x/sys v0.0.0-20190602015325-4c4f7f33c9ed
 	google.golang.org/appengine v1.6.0 // indirect
+	gopkg.in/alecthomas/kingpin.v2 v2.2.6
 )
 
 replace github.com/golang/lint v0.0.0-20190313153728-d0100b6bd8b3 => golang.org/x/lint v0.0.0-20190313153728-d0100b6bd8b3
