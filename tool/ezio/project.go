@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"io/ioutil"
 	"os"
-	"os/exec"
 	"strings"
 	"text/template"
 )
@@ -48,7 +47,7 @@ var (
 		_tplTypeServer:       "/internal/server.go",
 		_tplTypeHandler:      "/internal/handler.go",
 		_tplTypeModelDefault: "/model/default.go",
-		_tplTypeModel:        "/model/user.go",
+		_tplTypeModel:        "/model/demo.go",
 		// init proto
 		_tplTypeProto: "/proto/user.proto",
 		// init config
@@ -90,19 +89,7 @@ func create() (err error) {
 			return
 		}
 	}
-	if p.WithGRPC {
-		if err = genpb(); err != nil {
-			return
-		}
-	}
 	return
-}
-
-func genpb() error {
-	cmd := exec.Command("kratos", "tool", "protoc", p.Name+"/api/api.proto")
-	cmd.Stdout = os.Stdout
-	cmd.Stderr = os.Stderr
-	return cmd.Run()
 }
 
 func write(name, tpl string) (err error) {

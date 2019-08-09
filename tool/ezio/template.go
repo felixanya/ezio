@@ -70,6 +70,8 @@ func main() {
 		micro.Version("latest"),
 		// 指定服务发现地址
 		micro.Registry(reg),
+		micro.RegisterTTL(time.Second * 30),
+		micro.RegisterInterval(time.Second * 15),
 		micro.WrapHandler(
 			// 监控
 			prom_wrapper.NewHandlerWrapper(),
@@ -229,7 +231,7 @@ func New() *Service {
 	mysqlApollo := agollo.GetStringValue("mysql", "{}")
 	fmt.Println(mysqlApollo)
 	checkErr(json.Unmarshal([]byte(mysqlApollo), mc))
-	redisApollo := agollo.GetStringValue("redis", "{}"")
+	redisApollo := agollo.GetStringValue("redis", "{}")
 	checkErr(json.Unmarshal([]byte(redisApollo), rc))
 	return newService(mc, rc)
 }
