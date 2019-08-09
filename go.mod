@@ -20,3 +20,11 @@ require (
 	google.golang.org/appengine v1.6.0 // indirect
 	gopkg.in/alecthomas/kingpin.v2 v2.2.6
 )
+
+replace github.com/golang/lint v0.0.0-20190313153728-d0100b6bd8b3 => golang.org/x/lint v0.0.0-20190313153728-d0100b6bd8b3
+
+replace github.com/testcontainers/testcontainer-go => github.com/testcontainers/testcontainers-go v0.0.0-20190108154635-47c0da630f72
+
+replace github.com/hashicorp/consul => github.com/hashicorp/consul v1.5.1
+
+replace gopkg.in/jcmturner/rpc.v1 => github.com/jcmturner/rpc v0.0.0-20190727145011-a5898cb6c474
